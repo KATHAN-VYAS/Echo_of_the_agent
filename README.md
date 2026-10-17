@@ -1,7 +1,7 @@
 # Echo of the Agent
 
-**Course:** CMSC818I, University of Maryland, College Park  
-**Project type:** Graduate course project  
+**Course:** CMSC818I - Advanced Topics in Computer Systems; Large Language Models, Security, and Privacy
+**Project type:** Course project  
 
 ## Team
 
