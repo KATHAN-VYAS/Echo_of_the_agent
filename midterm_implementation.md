@@ -33,19 +33,7 @@ This is a feasibility experiment. It does not claim to detect malicious software
 - A Python analysis pipeline that produces JSON records and a readable comparison report.
 - Resource lifecycle categories: `final_dependency`, `temporary_helper`, `external_resource`, and `failed_attempt`.
 
-### Explicitly out of scope for the midterm
 
-- Training or hosting a local LLM.
-- VirtualBox, eBPF, kernel tracing, packet inspection, Docker, or a cloud VM.
-- Autonomous background agents, messaging integrations, OpenClaw, Hermes Agent, or multi-agent orchestration.
-- Real-time blocking or prevention of agent actions.
-- Vulnerability scoring, malware detection, or claims of compliance.
-- Full CycloneDX extension design. The primary output is our own JSON schema; CycloneDX export is optional if time remains.
-- Generalizing from one run to all AI agents or all languages.
-
-This scope is deliberate: a clean evidence trail and an honest experiment are more valuable than a large but unreliable prototype.
-
----
 
 ## 3. Proposed experiment
 
@@ -80,7 +68,6 @@ Every item in that difference must point to evidence. A resource without evidenc
 
 | Item | Required configuration | Reason |
 |---|---|---|
-| Operating system | Windows 11 or current Windows installation | Initial development host |
 | Agent | Codex CLI authenticated through the team's existing ChatGPT plan | Runs the coding task locally |
 | Runtime | Python 3.11+ | Scenario app and analysis scripts |
 | Version control | Git | Baseline, diff, and reproducibility |
@@ -472,20 +459,6 @@ Validation checks:
 5. Snapshot paths are relative, never absolute personal paths.
 6. Secrets, authentication tokens, and private paths are redacted from saved command lines before sharing the repository.
 7. The final SBOM scan scope is written in both `run-manifest.json` and `comparison.md`.
-
----
-
-## 13. Team work split
-
-This is a suggested division; all members should review the final experiment and report.
-
-| Team member | Primary ownership | Deliverables |
-|---|---|---|
-| Mingyoung Ban | Scenario and collection environment | Scenario repository, run script, baseline/final snapshots, Codex evidence capture |
-| Kathan Paresh Vyas | Research framing and evaluation | Related-work matrix, experiment protocol, result interpretation, report figures |
-| Chirag Advani | Data pipeline and export | Event normalizer, lifecycle classifier, JSON output, tests, comparison report |
-
-If a different team division is preferred, update this table before implementation so repository ownership is clear.
 
 ---
 
