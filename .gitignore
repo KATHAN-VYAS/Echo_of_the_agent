@@ -218,3 +218,121 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Generated evidence and BOM outputs may contain commands, paths, or source text.
+agentprov-context.json
+normalized-events.jsonl
+resource-inventory.json
+bom.cdx.json
+
+# -----------------------------------------------------------------------------
+# Echo of the Agent: repository-specific exclusions
+# -----------------------------------------------------------------------------
+
+# macOS and editor-local state. These files do not affect reproducibility.
+.DS_Store
+._*
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Authentication and secrets. Never commit Codex/OpenAI credentials, API keys,
+# SSH/TLS private material, cloud credentials, or local secret configuration.
+.codex/
+**/.codex/
+.agentprov/
+**/.agentprov/
+.aws/
+**/.aws/
+.ssh/
+**/.ssh/
+auth.json
+credentials.json
+secrets.json
+secrets.toml
+secrets.yaml
+secrets.yml
+*.pem
+*.key
+*.p12
+*.pfx
+.env.*
+!.env.example
+
+# Research datasets. Keep source datasets outside Git and distribute them by
+# stable upstream link or a controlled team storage location.
+data/
+datasets/
+SWE-chat/
+SWE_CHAT_*/
+*.parquet
+*.arrow
+*.jsonl
+*.json
+*.csv
+*.tsv
+
+# Small, reviewed, non-sensitive fixtures may be committed under these paths.
+!tests/fixtures/**/*.jsonl
+!examples/**/*.jsonl
+
+*.md
+private_share_v3/
+
+# Local experiments and demo workspaces. Evidence may contain absolute paths,
+# commands, source fragments, network destinations, or other host metadata.
+*_evidence/
+*_workspace/
+experiment-results/
+EXPERIMENTS/**/ARTIFACTS/
+*_ARTIFACTS/
+raw/
+artifacts/
+
+# AgentProvenance stores and sensor output. These are raw host-level telemetry
+# and must be shared only through the restricted experiment-data bundle.
+agentprov-data/
+agentprov-*-data/
+agentprov-ebpf-data/
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.spool
+forensics-*.json
+sensor.log
+sensor.pid
+
+# Codex/agent transcripts and execution logs. They can contain prompts, local
+# paths, configuration metadata, and command output.
+sessions/
+transcripts/
+launch-output*.log
+launch-report*.json
+codex-last-message*.txt
+context-import.json
+*.stdout
+*.stderr
+*.exit-code
+
+# Derived evidence and BOM files. Publish a reviewed/sanitized release bundle
+# separately instead of committing raw experiment output to the code repository.
+agentprov-context*.json
+normalized-events*.jsonl
+resource-inventory*.json
+inventory.json
+aibom*.json
+bom*.json
+*.cdx.json
+
+# Isolated package-manager caches and VM images are large machine-local state.
+aibom-cargo-*/
+.cargo/registry/
+.cargo/git/
+*.qcow2
+*.img
+*.iso
+*.tar.gz
+*.zst

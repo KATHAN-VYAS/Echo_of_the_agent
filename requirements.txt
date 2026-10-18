@@ -1,0 +1,2 @@
+cyclonedx-python-lib==11.7.0
+agentprovenance @ git+https://github.com/ByteYellow/AgentProvenance.git@fb83e6413178db3bde9803c8b4201811d5b0dde8
