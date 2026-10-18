@@ -1,7 +1,7 @@
 # Echo of the Agent — Midterm Implementation Specification
 
 **Course:** CMSC818I, University of Maryland, College Park  
-**Team:** Mingyoung Ban, Kathan Paresh Vyas, Chirag Advani  
+**Team:** Mingyoung Ban, Kathan Paresh Vyas, Chirag Adwani  
 **Repository:** `Echo_of_the_agent`  
 **Status:** Approved implementation scope for the midterm prototype
 
