@@ -7,7 +7,7 @@
 
 - Mingyoung Ban
 - Kathan Paresh Vyas
-- Chirag Advani
+- Chirag Adwani
 
 ## Project idea
 
